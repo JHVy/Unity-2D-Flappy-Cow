@@ -6,13 +6,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private const string HIGHT_SCORE = "Hight Score";
+    private const string HIGH_SCORE = "High Score";
 
     void IsGameStartedForTheFirstTime()
     {
         if(!PlayerPrefs.HasKey("IsGameStartedForTheFirstTime"))
         {
-            PlayerPrefs.SetInt(HIGHT_SCORE, 0);
+            PlayerPrefs.SetInt(HIGH_SCORE, 0);
             PlayerPrefs.SetInt("IsGameStartedForTheFirstTime", 0);
         }
     }
@@ -39,11 +39,11 @@ public class GameManager : MonoBehaviour
 
     public void SetHightScore(int score)
     {
-        PlayerPrefs.SetInt(HIGHT_SCORE, score);
+        PlayerPrefs.SetInt(HIGH_SCORE, score);
     }
 
     public int GetHightScore()
     {
-        return PlayerPrefs.GetInt(HIGHT_SCORE);
+        return PlayerPrefs.GetInt(HIGH_SCORE);
     }
 }
