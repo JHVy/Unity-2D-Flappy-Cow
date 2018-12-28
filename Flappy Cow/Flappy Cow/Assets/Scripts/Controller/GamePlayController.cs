@@ -9,7 +9,7 @@ public class GamePlayController : MonoBehaviour
     public static GamePlayController instance;
 
     [SerializeField]
-    private Button instructionButton;
+    private Button instructionButton, pauseButton;
 
     [SerializeField]
     private Text scoreText, endScoreText, bestScoreText;
@@ -69,6 +69,7 @@ public class GamePlayController : MonoBehaviour
     {
         Time.timeScale = 0;
         pausePanel.SetActive(true);
+        instructionButton.gameObject.SetActive(false);
     }
 
     public void _ResumeButton()
