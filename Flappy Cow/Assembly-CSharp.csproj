@@ -56,7 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BGScaler\BGScaler.cs" />
+    <Compile Include="Assets\Scripts\Controller\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Controller\GamePlayController.cs" />
+    <Compile Include="Assets\Scripts\Controller\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\CowController\CowController.cs" />
+    <Compile Include="Assets\Scripts\InfoController\InfoController.cs" />
     <Compile Include="Assets\Scripts\PipeController\PipeHolder.cs" />
     <Compile Include="Assets\Scripts\SpawnerPipe\SpawnerPipe.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

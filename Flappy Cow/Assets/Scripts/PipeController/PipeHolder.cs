@@ -34,10 +34,6 @@ public class PipeHolder : MonoBehaviour
         transform.position = temp;
     }
 
-    void OnCollisionEnter2D(Collision2D target)
-    {
-
-    }
 
     void OnTriggerEnter2D(Collider2D target)
     {

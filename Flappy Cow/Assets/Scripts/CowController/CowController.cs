@@ -24,6 +24,7 @@ public class CowController : MonoBehaviour
     private GameObject spawner;
 
     public float flag = 0;
+    public int score = 0;
 
     // Start is called before the first frame update
     void Awake()
@@ -90,6 +91,11 @@ public class CowController : MonoBehaviour
     {
         if(target.tag == "PipeHolder")
         {
+            score++;
+            if(GamePlayController.instance != null)
+            {
+                GamePlayController.instance._SetScore(score);
+            }
             audioSource.PlayOneShot(pingClip);
         }
     }
@@ -99,9 +105,17 @@ public class CowController : MonoBehaviour
         if(target.gameObject.tag == "Pipe" || target.gameObject.tag == "Ground")
         {
             flag = 1;
-            Destroy(spawner);
-            audioSource.PlayOneShot(diedClip);
-            ani.SetTrigger("Died");
+            if(isAlive)
+            {
+                isAlive = false;
+                Destroy(spawner);
+                audioSource.PlayOneShot(diedClip);
+                ani.SetTrigger("Died");
+            }
+            if(GamePlayController.instance != null)
+            {
+                GamePlayController.instance._CowDieShowPanel(score);
+            }
         }
     }
 }
