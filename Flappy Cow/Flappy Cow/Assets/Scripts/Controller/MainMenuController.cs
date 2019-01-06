@@ -21,4 +21,10 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName: "MenuScene");
     }
+
+    public void _QuitButton()
+    {
+        Debug.Log("QUIT!");
+        Application.Quit();
+    }
 }

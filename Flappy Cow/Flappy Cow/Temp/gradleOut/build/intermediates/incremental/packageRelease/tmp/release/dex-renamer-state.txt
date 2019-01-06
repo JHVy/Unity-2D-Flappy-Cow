@@ -1,0 +1,4 @@
+#Sun Jan 06 21:43:54 ICT 2019
+base.0=H\:\\UnityProjects\\Flappy Cow\\Temp\\gradleOut\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
